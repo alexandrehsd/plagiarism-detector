@@ -5,7 +5,7 @@
 groups = ["default", "study"]
 strategy = ["cross_platform", "inherit_metadata"]
 lock_version = "4.4.1"
-content_hash = "sha256:51354ffdfe031de13c0e6b17bf51e8fafe2d6e5ccf851d43135ae7a34ba8131a"
+content_hash = "sha256:f14cc981770d705b7c1873f97ad969c724f7d7eb812e8a804c467c0309dcfd20"
 
 [[package]]
 name = "absl-py"
@@ -336,7 +336,7 @@ name = "click"
 version = "8.1.7"
 requires_python = ">=3.7"
 summary = "Composable command line interface toolkit"
-groups = ["study"]
+groups = ["default", "study"]
 dependencies = [
     "colorama; platform_system == \"Windows\"",
 ]
@@ -1536,6 +1536,23 @@ files = [
 ]
 
 [[package]]
+name = "nltk"
+version = "3.8.1"
+requires_python = ">=3.7"
+summary = "Natural Language Toolkit"
+groups = ["default"]
+dependencies = [
+    "click",
+    "joblib",
+    "regex>=2021.8.3",
+    "tqdm",
+]
+files = [
+    {file = "nltk-3.8.1-py3-none-any.whl", hash = "sha256:fd5c9109f976fa86bcadba8f91e47f5e9293bd034474752e92a520f81c93dda5"},
+    {file = "nltk-3.8.1.zip", hash = "sha256:1834da3d0682cba4f2cede2f9aad6b0fafb6461ba451db0efb6f9c39798d64d3"},
+]
+
+[[package]]
 name = "numpy"
 version = "1.26.4"
 requires_python = ">=3.9"
@@ -2591,6 +2608,29 @@ files = [
 ]
 
 [[package]]
+name = "sentence-transformers"
+version = "2.3.0"
+requires_python = ">=3.8.0"
+summary = "Multilingual text embeddings"
+groups = ["default"]
+dependencies = [
+    "Pillow",
+    "huggingface-hub>=0.15.1",
+    "nltk",
+    "numpy",
+    "scikit-learn",
+    "scipy",
+    "sentencepiece",
+    "torch>=1.11.0",
+    "tqdm",
+    "transformers<5.0.0,>=4.32.0",
+]
+files = [
+    {file = "sentence-transformers-2.3.0.tar.gz", hash = "sha256:8cd90bedc73f2cb6b8fa81f9ebf2bb24fb15a3eed4dd39bf7865d211c3bb6253"},
+    {file = "sentence_transformers-2.3.0-py3-none-any.whl", hash = "sha256:d12607a2172c50e77ccd3cf160a5070c1d1e8f974d17f0dd7e05d015f76d6108"},
+]
+
+[[package]]
 name = "sentencepiece"
 version = "0.2.0"
 summary = "SentencePiece python wrapper"
@@ -2960,24 +3000,25 @@ files = [
 
 [[package]]
 name = "transformers"
-version = "4.28.1"
-requires_python = ">=3.7.0"
+version = "4.32.0"
+requires_python = ">=3.8.0"
 summary = "State-of-the-art Machine Learning for JAX, PyTorch and TensorFlow"
 groups = ["default"]
 dependencies = [
     "filelock",
-    "huggingface-hub<1.0,>=0.11.0",
+    "huggingface-hub<1.0,>=0.15.1",
     "numpy>=1.17",
     "packaging>=20.0",
     "pyyaml>=5.1",
     "regex!=2019.12.17",
     "requests",
+    "safetensors>=0.3.1",
     "tokenizers!=0.11.3,<0.14,>=0.11.1",
     "tqdm>=4.27",
 ]
 files = [
-    {file = "transformers-4.28.1-py3-none-any.whl", hash = "sha256:f30a006220d0475789ac0e7c874f51bf5143956797616d89975b637883ce0be6"},
-    {file = "transformers-4.28.1.tar.gz", hash = "sha256:7334f8730cff7ac31d9ba5c12f2113fcb7a7a5b61eeb5dbbdb162117c3aaa2d1"},
+    {file = "transformers-4.32.0-py3-none-any.whl", hash = "sha256:32d8adf0ed76285508e7fd66657b4448ec1f882599ae6bf6f9c36bd7bf798402"},
+    {file = "transformers-4.32.0.tar.gz", hash = "sha256:ca510f9688d2fe7347abbbfbd13f2f6dcd3c8349870c8d0ed98beed5f579b354"},
 ]
 
 [[package]]
