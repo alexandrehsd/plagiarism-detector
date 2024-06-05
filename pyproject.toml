@@ -8,7 +8,7 @@ study = [
     "openpyxl>=3.1.3",
 ]
 [project]
-name = ""
+name = "plagiarism-detector"
 version = ""
 description = ""
 authors = [
