@@ -28,3 +28,17 @@ requirements:
 # start a jupyter notebook server
 jupyter:
 	PYTHONPATH=$(shell pwd) python -m jupyter notebook
+
+.PHONY: unzip_dataset
+# unzip the dataset folder
+unzip_dataset:
+	unzip -o dataset.zip -d dataset
+
+.PHONY: unzip_artifacts
+# unzip the artifacts folder
+unzip_artifacts:
+	unzip -o artifacts.zip -d artifacts
+
+.PHONY: unzip_all
+# unzip the dataset and artifacts folder
+unzip_all: unzip_dataset unzip_artifacts
